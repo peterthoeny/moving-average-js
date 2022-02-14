@@ -75,9 +75,11 @@
     });
 
     function redraw() {
-        let arr = $('#dataPoints').val().split(/ *, */).map(val => { return val.replace(/[^\d\.]/g, ''); }).filter(Boolean).slice(0, 51).map(val => { return Number(val); });
+        let arr = $('#dataPoints').val().split(/ *, */).map(val => {
+            return val.replace(/[^\d\.]/g, '');
+        }).filter(Boolean).slice(0, 51).map(val => { return Number(val); });
         if(arr.length < 3) {
-            arr = arr.concat([ '1', '2', '3', '4' ]).slice(0, 4);
+            arr = arr.concat([ 1, 2, 3, 4 ]).slice(0, 4);
         }
         //console.log('arr: '+JSON.stringify(arr));
         $('#dataPoints').val(arr.join(', '));
@@ -114,16 +116,16 @@
   Show in chart:
 </td><td>
   <label><input type="checkbox" id="showSMA" checked="checked" /> SMA
-  (<span style="color: #33ee33;" class="dashedLine">classic</span> & <span style="color: #33ee33;" class="solidLine">balanced</span>)
+  (<span style="color: #33ee33;" class="dashedLine">classic</span> &amp; <span style="color: #33ee33;" class="solidLine">balanced</span>)
   </label> &nbsp;
   <label><input type="checkbox" id="showEMA" checked="checked" /> EMA
-  (<span style="color: #ee9933;" class="dashedLine">classic</span> & <span style="color: #ee9933;" class="solidLine">balanced</span>)
+  (<span style="color: #ee9933;" class="dashedLine">classic</span> &amp; <span style="color: #ee9933;" class="solidLine">balanced</span>)
   </label> &nbsp;
   <label><input type="checkbox" id="showWMA" checked="checked" /> WMA
-  (<span style="color: #3333ee;" class="dashedLine">classic</span> & <span style="color: #3333ee;" class="solidLine">balanced</span>)
+  (<span style="color: #3333ee;" class="dashedLine">classic</span> &amp; <span style="color: #3333ee;" class="solidLine">balanced</span>)
   </label> &nbsp;
   <label><input type="checkbox" id="showSlope" checked="checked" /> Slope
-  (<span style="color: #ee3333;" class="dashedLine">overall</span> & <span style="color: #ee33ee;" class="dashedLine">extended</span>)
+  (<span style="color: #ee3333;" class="dashedLine">overall</span> &amp; <span style="color: #ee33ee;" class="dashedLine">extended</span>)
   </label>
 </td></tr>
 </table>
