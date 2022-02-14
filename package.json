@@ -1,13 +1,12 @@
 {
     "name": "moving-average-js",
-    "version": "0.1.0",
-    "description": "Moving average algorithms & demo",
+    "version": "1.0.0",
+    "description": "Moving average algorithms & demo: Classic and balanced SMA, EMA, WMA",
     "author": "Peter Thoeny",
     "license": "MIT",
     "homepage": "https://github.com/peterthoeny/moving-average-js/",
     "main": "moving-average.js",
-    "scripts": {
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
         "url": "git+https://github.com/peterthoeny/moving-average-js.git"
@@ -15,9 +14,6 @@
     "bugs": {
         "url": "https://github.com/peterthoeny/moving-average-js/issues"
     },
-    "devDependencies": {
-    },
-    "dependencies": {
-    }
+    "devDependencies": {},
+    "dependencies": {}
 }
-
