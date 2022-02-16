@@ -7,7 +7,7 @@ This package provides a JavaScript function to calculate an array of SMA (simple
 ```
   $ git clone https://github.com/peterthoeny/moving-average-js.git # or clone your own fork
 ```
-Point your browser to `moving-average-js/demo.html`, also available online at [https://peterthoeny.github.io/moving-average/demo.html](https://peterthoeny.github.io/moving-average/demo.html).
+Point your browser to `moving-average-js/demo.html`, also available online at https://peterthoeny.github.io/moving-average-js/demo.html.
 
 Function usage example:
 ```
@@ -60,7 +60,7 @@ In addition, the slope over all data points is available with this type:
 
 ## Demo
 
-The `demo.html` file demonstrates the various moving average algorythms, also available online at [https://peterthoeny.github.io/moving-average/demo.html](https://peterthoeny.github.io/moving-average/demo.html). Checkmark **Slope** to see the extended slope on the left side and right side.
+The `demo.html` file demonstrates the various moving average algorythms, also available online at https://peterthoeny.github.io/moving-average-js/demo.html. Checkmark **Slope** to see the extended slope on the left side and right side.
 
 Screenhot of demo HTML page showing the data points (red line), the extended slopes (dashed red lines), classic SMA curve (dashed green line), balanced SMA curve (solid green line), and slope (dashed purple line):
 
