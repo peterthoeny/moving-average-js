@@ -13,7 +13,7 @@
  *                         'BEMA':  balanced exponential moving average,
  *                         'WMA':   weighted moving average,
  *                         'BWMA':  balanced weighted moving average,
- *                         'Slope': linerar slope
+ *                         'Slope': linear slope over all data points
  *                         'BSlope': special case returning extended array with slope used in balanced algorythm
  * @param  {String} size   size of moving array slice to calculate average
  * @return {Array}  maArr  moving average array
