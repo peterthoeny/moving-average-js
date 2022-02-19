@@ -20,14 +20,20 @@ Function usage example:
 
 ## Moving Average Documentation
 
-The `movingAverage()` function in the `moving-average.js` Javascript file returns a moving average array from an input array of data points. The function can be used in a browser, as well as in a node.js application on a server. Three types of classic moving average algorithms are implemented:
-- `SMA`: Simple moving average
-- `EMA`: Exponential moving average
-- `WMA`: Weighted moving average
+The `movingAverage()` function in the `moving-average.js` Javascript file returns a moving average array from an input array of data points. The function can be used in a browser, as well as in a node.js application on a server.
+
+### Classic Moving Average Algorithms
+
+Three types of classic moving average algorithms are implemented:
+- `SMA`: [Simple moving average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
+- `EMA`: [Exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average)
+- `WMA`: [Weighted moving average](https://en.wikipedia.org/wiki/Moving_average#Weighted_moving_average)
 
 A classic moving average algorythm looks only at a moving window (sample width) of data points to the left of the current data point. Therefore, the moving average lags behind the current data point by half the sample width, e.g. the moving average curve is shifted to the right. This method is mainly used in financial applications.
 
-In turn, a balanced moving average algorythm looks equally to the left and right of the current data point. In other words, the moving average is centered around the current data point. This is primarily used in scientific applications.
+### Balanced Moving Average Algorithms
+
+A balanced moving average algorythm looks equally to the left and right of the current data point. In other words, the moving average is centered around the current data point. This is primarily used in scientific applications.
 
 The balanced moving average algorythm in this implementation first extends the given data points array by extrapolating the data points on both sides, so that the moving average curve looks more balanced at the beginning and end. The extrapolation assumes the extended slope of the data points equal to half of the sample width, e.g. it assumes that the same average rate of increase/decrease of half the sample width happens for the extrapolated area. Try the demo to see the extended slope on the left side and right side, and to compare that to one of the balanced moving average curves.
 
@@ -36,7 +42,9 @@ Three types of balanced moving average algorithms are implemented:
 - `BEMA`: Balanced exponential moving average
 - `BWMA`: Balanced weighted moving average
 
-In addition, the slope over all data points is available with this type:
+### Slope Algorithm
+
+A slope shows the average rate of change over all data points:
 - `Slope`: Linear slope over all data points
 
 ## Function movingAverage() Documentation
