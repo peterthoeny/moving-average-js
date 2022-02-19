@@ -29,13 +29,13 @@ Three types of classic moving average algorithms are implemented:
 - `EMA`: [Exponential moving average](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average)
 - `WMA`: [Weighted moving average](https://en.wikipedia.org/wiki/Moving_average#Weighted_moving_average)
 
-A classic moving average algorythm looks only at a moving window (sample width) of data points to the left of the current data point. Therefore, the moving average lags behind the current data point by half the sample width, e.g. the moving average curve is shifted to the right. This method is mainly used in financial applications.
+A classic moving average algorithm looks only at a moving window (sample width) of data points to the left of the current data point. Therefore, the moving average lags behind the current data point by half the sample width, e.g. the moving average curve is shifted to the right. This method is mainly used in financial applications.
 
 ### Balanced Moving Average Algorithms
 
-A balanced moving average algorythm looks equally to the left and right of the current data point. In other words, the moving average is centered around the current data point. This is primarily used in scientific applications.
+A balanced moving average, also called central moving average, or symmetrical moving average, is computed by looking equally to both sides of the current data point. In other words, the moving average is centered around the current data point. This is primarily used in scientific applications.
 
-The balanced moving average algorythm in this implementation first extends the given data points array by extrapolating the data points on both sides, so that the moving average curve looks more balanced at the beginning and end. The extrapolation assumes the extended slope of the data points equal to half of the sample width, e.g. it assumes that the same average rate of increase/decrease of half the sample width happens for the extrapolated area. Try the demo to see the extended slope on the left side and right side, and to compare that to one of the balanced moving average curves.
+The balanced moving average algorithm in this implementation first extends the given data points array by extrapolating the data points on both sides, so that the moving average curve looks more balanced at the beginning and end. The extrapolation assumes that the extended slope of the data points is equal to half of the sample width, e.g. it assumes that the same average rate of change over half the sample width happens also for the extrapolated range. Try the demo to see the extended slope on the left side and right side, and to compare that to one of the balanced moving average curves.
 
 Three types of balanced moving average algorithms are implemented:
 - `BSMA`: Balanced simple moving average
@@ -59,16 +59,17 @@ A slope shows the average rate of change over all data points:
  *                         'BEMA':  balanced exponential moving average,
  *                         'WMA':   weighted moving average,
  *                         'BWMA':  balanced weighted moving average,
- *                         'Slope': linerar slope
- *                         'BSlope': special case returning extended array with slope used in balanced algorythm
+ *                         'Slope': linear slope over all data points
  * @param  {String} size   size of moving array slice to calculate average
  * @return {Array}  maArr  moving average array
  */
+function movingAverage(arr, type, size) {
+}
 ```
 
 ## Demo
 
-The `demo.html` file demonstrates the various moving average algorythms, also available online at https://peterthoeny.github.io/moving-average-js/demo.html. Checkmark **Slope** to see the extended slope on the left side and right side.
+The `demo.html` file demonstrates the various moving average algorithms, also available online at https://peterthoeny.github.io/moving-average-js/demo.html. Checkmark **Slope** to see the extended slope on the left side and right side.
 
 Screenhot of demo HTML page showing the data points (red line), the extended slopes (dashed red lines), classic SMA curve (dashed green line), balanced SMA curve (solid green line), and slope (dashed purple line):
 
