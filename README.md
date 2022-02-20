@@ -1,4 +1,4 @@
-# Moving Average Code & Demo (moving-average-js, v1.0.1)
+# Moving Average Code & Demo (moving-average-js, v1.1.0)
 
 This package provides a JavaScript function to calculate an array of SMA (simple moving average), EMA (exponential moving average), and WMA (weighted moving average) of data points, using either a classic or balanced algorithm. A demo HTML page using this function is provided to try various moving average algorithms.
 
@@ -20,9 +20,9 @@ Function usage example:
 
 ## Moving Average Documentation
 
-The `movingAverage()` function in the `moving-average.js` Javascript file returns a moving average array from an input array of data points. The function can be used in a browser, as well as in a node.js application on a server.
+The `movingAverage()` function in the `moving-average.js` Javascript file returns a moving average or moving median array from an input array of data points. The function can be used in a browser, as well as in a node.js application on a server.
 
-### Classic Moving Average Algorithms
+### Classic Moving Average & Moving Median Algorithms
 
 Three types of classic moving average algorithms are implemented:
 - `SMA`: [Simple moving average](https://en.wikipedia.org/wiki/Moving_average#Simple_moving_average)
@@ -31,7 +31,12 @@ Three types of classic moving average algorithms are implemented:
 
 A classic moving average algorithm looks only at a moving window (sample width) of data points to the left of the current data point. Therefore, the moving average lags behind the current data point by half the sample width, e.g. the moving average curve is shifted to the right. This method is mainly used in financial applications.
 
-### Balanced Moving Average Algorithms
+In contrast to a moving average, a simple moving median is found by sorting the values inside the moving window of data points, and finding the value in the middle.
+
+A single type of moving median algorithm is currently implemented:
+- `SMM`: [Simple moving median](https://en.wikipedia.org/wiki/Moving_average#Moving_median)
+
+### Balanced Moving Average & Moving Median Algorithms
 
 A balanced moving average, also called central moving average, or symmetrical moving average, is computed by looking equally to both sides of the current data point. In other words, the moving average is centered around the current data point. This is primarily used in scientific applications.
 
@@ -41,6 +46,9 @@ Three types of balanced moving average algorithms are implemented:
 - `BSMA`: Balanced simple moving average
 - `BEMA`: Balanced exponential moving average
 - `BWMA`: Balanced weighted moving average
+
+A single type of balanced moving median algorithm is implemented:
+- `BSMM`: Balanced simple moving median
 
 ### Slope Algorithm
 
@@ -59,6 +67,8 @@ A slope shows the average rate of change over all data points:
  *                         'BEMA':  balanced exponential moving average,
  *                         'WMA':   weighted moving average,
  *                         'BWMA':  balanced weighted moving average,
+ *                         'SMM':   simple moving median,
+ *                         'BSMM':  balanced simple moving median,
  *                         'Slope': linear slope over all data points
  * @param  {String} size   size of moving array slice to calculate average
  * @return {Array}  maArr  moving average array

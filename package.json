@@ -1,7 +1,7 @@
 {
     "name": "moving-average-js",
-    "version": "1.0.1",
-    "description": "Moving average algorithms & demo: Classic and balanced SMA, EMA, WMA",
+    "version": "1.1.0",
+    "description": "Moving average algorithms & demo: Classic and balanced SMA, EMA, WMA, SMM, Slope",
     "author": "Peter Thoeny",
     "license": "MIT",
     "homepage": "https://github.com/peterthoeny/moving-average-js/",
