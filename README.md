@@ -79,9 +79,9 @@ function movingAverage(arr, type, size) {
 
 ## Demo
 
-The `demo.html` file demonstrates the various moving average algorithms, also available online at https://peterthoeny.github.io/moving-average-js/demo.html. Checkmark **Slope** to see the extended slope on the left side and right side.
+The `demo.html` file demonstrates the various moving average algorithms, also available online at https://peterthoeny.github.io/moving-average-js/demo.html. The extended slopes are shown on the left side and right side when the **Slope** checkbox is checked.
 
-Screenhot of demo HTML page showing the data points (red line), the extended slopes (dashed red lines), classic SMA curve (dashed green line), balanced SMA curve (solid green line), and slope (dashed purple line):
+Screenhot of demo HTML page showing the data points (red line), the extended slopes (dashed purple lines), classic SMA curve (dashed blue line), balanced SMA curve (solid blue line), and slope (dashed red line):
 
 ![Screenshot](screenshot.png)
 
