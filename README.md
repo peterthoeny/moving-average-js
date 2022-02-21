@@ -1,4 +1,4 @@
-# Moving Average Code & Demo (moving-average-js, v1.1.0)
+# Moving Average Code & Demo (moving-average-js, v1.1.1)
 
 This package provides a JavaScript function to calculate an array of SMA (simple moving average), WMA (weighted moving average), and EMA (exponential moving average) of data points, using either a classic or balanced algorithm. A demo HTML page using this function is provided to try various moving average algorithms.
 
